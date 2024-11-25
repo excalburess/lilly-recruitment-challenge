@@ -41,9 +41,15 @@ async function handleFormSubmit(event) {
     const name = nameInput.value.trim();
     const price = parseFloat(priceInput.value);
 
+    const nameRegex = /^[a-zA-Z\s]+$/;
+
     //error handling
     if (!name) {
         alert("Please enter a valid medicine name.");
+        return;
+    }
+    if (!nameRegex.test(name)) {
+        alert("Medicine name can only contain letters and spaces.");
         return;
     }
     if (isNaN(price) || price <= 0) {
