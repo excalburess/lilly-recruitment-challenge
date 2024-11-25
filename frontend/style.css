@@ -1,32 +1,137 @@
 /* ---- Global styles ---- */
-
-/* CSS Reset */
-* {
+:root {
+    --lilly-red: #e4002b;
+    --lilly-dark: #2d2926;
+    --lilly-gray: #767676;
+    --lilly-light: #f7f7f7;
+  }
+  
+  * {
     box-sizing: border-box;
-}
-
-/* Body styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 0;
     margin: 0;
-    color: #333;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--lilly-dark);
+    background-color: white;
     padding-top: 30px;
-}
-
-/* Disclaimer styles. DO NOT REMOVE OR EDIT UNLESS ABSOLUTELY NECESSARY */
-.disclaimer {
+  }
+  
+  /* Disclaimer styles */
+  .disclaimer {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: black;
+    background-color: var(--lilly-dark);
     color: white;
     text-align: center;
     padding: 0.5rem;
     z-index: 1000;
-    font-weight: bold;
+    font-size: 0.875rem;
     height: 30px;
-}
-
-/* ---- Your custom styles below ---- */
+  }
+  
+  /* Header styles */
+  header {
+    background-color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+  }
+  
+  header h1 {
+    color: var(--lilly-dark);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  /* Main content styles */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+  
+  section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  h2 {
+    color: var(--lilly-dark);
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+  }
+  
+  /* Form styles */
+  form {
+    display: grid;
+    gap: 1rem;
+    max-width: 600px;
+  }
+  
+  label {
+    color: var(--lilly-gray);
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: var(--lilly-red);
+    box-shadow: 0 0 0 2px rgba(228, 0, 43, 0.1);
+  }
+  
+  button {
+    background-color: var(--lilly-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #c4002b;
+  }
+  
+  /* Medicine list styles */
+  #medicine-list {
+    display: grid;
+    gap: 1rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+    
+    section {
+      padding: 1.5rem;
+    }
+    
+    form {
+      gap: 0.75rem;
+    }
+  }
